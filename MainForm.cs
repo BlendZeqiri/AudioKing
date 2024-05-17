@@ -1,6 +1,6 @@
-using System;
-using System.Windows.Forms;
+﻿using System;
 using System.Media;
+using System.Windows.Forms;
 using System.IO;
 
 namespace SoundKing
@@ -86,15 +86,17 @@ namespace SoundKing
 
         private void txtTimer_TextChanged(object sender, EventArgs e)
         {
-            // Event handler logic for the txtTimer_TextChanged event
-            // This method can be left empty or populated with the desired functionality
+            // Handle text changed event if needed
         }
 
         private void lblTimer_Click(object sender, EventArgs e)
         {
-            // Event handler logic for the lblTimer_Click event
-            // This method can be left empty or populated with the desired functionality
+            // Handle label click event if needed
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            // Handle form load event if needed
         }
     }
 }
-

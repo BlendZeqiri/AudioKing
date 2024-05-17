@@ -1,0 +1,11 @@
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.csproj.AssemblyReference.cache
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.Properties.Resources.resources
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.csproj.GenerateResource.cache
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.csproj.CoreCompileInputs.cache
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.MainForm.resources
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\bin\Debug\SoundKing.exe.config
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\bin\Debug\SoundKing.exe
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\bin\Debug\SoundKing.pdb
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.exe
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.pdb
+C:\Users\Blendi\source\repos\SoundKing\SoundKing\obj\Debug\SoundKing.StopForm.resources

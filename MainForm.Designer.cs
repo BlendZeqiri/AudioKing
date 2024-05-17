@@ -1,13 +1,14 @@
-namespace SoundKing
+﻿namespace SoundKing
 {
     partial class MainForm
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Label lblTimer;
+        private System.Windows.Forms.TextBox txtTimer;
         private System.Windows.Forms.Button btnSelectMusic;
         private System.Windows.Forms.Label lblSelectedFile;
         private System.Windows.Forms.Button btnStartTimer;
-        private System.Windows.Forms.TextBox txtTimer;
+        private System.Windows.Forms.Timer timeru;
 
         protected override void Dispose(bool disposing)
         {
@@ -26,6 +27,7 @@ namespace SoundKing
             this.btnSelectMusic = new System.Windows.Forms.Button();
             this.lblSelectedFile = new System.Windows.Forms.Label();
             this.btnStartTimer = new System.Windows.Forms.Button();
+            this.timeru = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblTimer
@@ -58,10 +60,10 @@ namespace SoundKing
             // 
             this.btnSelectMusic.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSelectMusic.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectMusic.Location = new System.Drawing.Point(372, 65);
+            this.btnSelectMusic.Location = new System.Drawing.Point(362, 65);
             this.btnSelectMusic.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSelectMusic.Name = "btnSelectMusic";
-            this.btnSelectMusic.Size = new System.Drawing.Size(84, 46);
+            this.btnSelectMusic.Size = new System.Drawing.Size(94, 46);
             this.btnSelectMusic.TabIndex = 2;
             this.btnSelectMusic.Text = "Music";
             this.btnSelectMusic.UseVisualStyleBackColor = false;
@@ -86,4 +88,29 @@ namespace SoundKing
             this.btnStartTimer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnStartTimer.Name = "btnStartTimer";
             this.btnStartTimer.Size = new System.Drawing.Size(307, 46);
-            this.btnIt appears that the `AudioKing` GitHub repository contains several files, including `MainForm.cs`, `StopForm.cs`, and related design and configuration files. To integrate the `StopForm` popup with a stop button in your project, ensure the form is correctly designed and referenced in the `MainForm`.
+            this.btnStartTimer.TabIndex = 4;
+            this.btnStartTimer.Text = "Start";
+            this.btnStartTimer.UseVisualStyleBackColor = false;
+            this.btnStartTimer.Click += new System.EventHandler(this.btnStartTimer_Click);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(497, 120);
+            this.Controls.Add(this.btnStartTimer);
+            this.Controls.Add(this.lblSelectedFile);
+            this.Controls.Add(this.btnSelectMusic);
+            this.Controls.Add(this.txtTimer);
+            this.Controls.Add(this.lblTimer);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "MainForm";
+            this.Text = "War Timer";
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+    }
+}
