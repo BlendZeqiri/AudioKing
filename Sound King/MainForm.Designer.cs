@@ -1,4 +1,7 @@
-﻿namespace SoundKing
+﻿using System.Windows.Forms;
+using System;
+
+namespace SoundKing
 {
     partial class MainForm
     {
@@ -9,7 +12,7 @@
         private System.Windows.Forms.Label lblSelectedFile;
         private System.Windows.Forms.Button btnStartTimer;
         private System.Windows.Forms.Timer timeru;
-
+       
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))

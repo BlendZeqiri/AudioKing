@@ -2,16 +2,18 @@
 using System.Media;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 
 namespace SoundKing
 {
     public partial class MainForm : Form
     {
+        public void StopForm.PlayMusic();
         private Timer timer;
-        private string selectedMusicFilePath;
+        public string selectedMusicFilePath;
         private int timeLeft;
         private SoundPlayer player;
-
+        public int timeleftcopy;
         public MainForm()
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace SoundKing
             if (int.TryParse(txtTimer.Text, out timeLeft) && !string.IsNullOrEmpty(selectedMusicFilePath))
             {
                 timer.Start();
+                ShowStopForm();
             }
             else
             {
@@ -44,11 +47,13 @@ namespace SoundKing
             }
         }
 
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (timeLeft > 0)
             {
                 timeLeft--;
+                timeleftcopy = timeLeft;
             }
             else
             {
@@ -57,26 +62,9 @@ namespace SoundKing
             }
         }
 
-        private void PlayMusic()
-        {
-            try
-            {
-                if (Path.GetExtension(selectedMusicFilePath).Equals(".wav", StringComparison.OrdinalIgnoreCase))
-                {
-                    player = new SoundPlayer(selectedMusicFilePath);
-                    player.Play();
-                    ShowStopForm();
-                }
-                else
-                {
-                    MessageBox.Show("MP3 playback requires additional libraries. Only WAV files are supported out of the box.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error playing music: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+
+
+        
 
         private void ShowStopForm()
         {
@@ -98,5 +86,9 @@ namespace SoundKing
         {
             // Handle form load event if needed
         }
+
+      
+
+
     }
 }
